@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int fun(int x,int y,int z) {
+    if(x>=y&&y>=z)return y;
+    if(x>=z&&z>=y)return z;
+    
+    if(x<=y&&y<=z)return y;
+    if(x<=z&&z<=y)return z;
+    
+    return x;
+}
+
+
+int main() {
+
+    int t;
+    cin >> t;
+    while (t > 0) {
+        int x,y,z;
+        cin >> x>>y>>z;
+        cout << fun(x,y,z);
+        t--;
+        cout << "\n";
+    }
+
+    return 0;
+}
